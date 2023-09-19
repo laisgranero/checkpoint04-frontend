@@ -1,0 +1,171 @@
+:root {
+    /*Declarando variáveis globais para raio, padding e cor de fundo*/
+    --main--radius: 5px; 
+    --main--padding: 15px;
+    --main--bg--color: rgb(225, 209, 228);
+}
+
+body {
+    /*Estilizando body, colocando a largura total*/
+    width: 100%;
+}
+
+.container {
+    /* Estilizando o container */
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.5fr;
+    grid-template-areas: 
+                        "nav nav nav"
+                        "main main aside"
+                        "content1 content2 aside"
+                        "footer footer footer"; /* Área do grid */
+    grid-gap: 0.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font: 1em;
+    margin: 0 auto; /* Margem automática para centralizar */
+}
+
+/*Estilizando Nav, Aside, Main, Sections e Footer com radius, padding top e background color (utilizando as variáveis criadas)
+e a área de Grid para ser reconhecida no bloco anterior*/
+
+nav {
+    background-color: var(--main--bg--color);
+    grid-area: nav;
+    border-radius: var(--main--radius);
+    padding: var(--main--padding);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main--bg--color);
+    grid-area: main;
+    border-radius: var(--main--radius);
+    padding: var(--main--padding);
+}
+
+aside {
+    display: flex; 
+    flex-direction: column; /* Organizando os elementos em coluna */
+    justify-content: center; /* Centralizando verticalmente os elementos */
+    align-items: center; /* Centralizando horizontalmente os elementos */
+    background-color: var(--main--bg--color);
+    grid-area: aside;
+    border-radius: var(--main--radius);
+    padding: var(--main--padding);
+    text-align: center; /* Centralizando o texto */
+}
+
+
+#content1 {
+    display: flex;
+    flex-direction: column; /* Alinhando os elementos em coluna */
+    align-items: center; /* Centralizando horizontalmente os elementos */
+    text-align: center; /* Centralizando o texto */
+    background-color: var(--main--bg--color);
+    grid-area: content1;
+    border-radius: var(--main--radius);
+    padding-top: var(--main--padding);
+}
+
+#content2 {
+    display: flex;
+    flex-direction: column; /* Alinhando os elementos em coluna */
+    align-items: center; /* Centralizando horizontalmente os elementos */
+    text-align: center; /* Centralizando o texto */
+    background-color: var(--main--bg--color);
+    grid-area: content2;
+    border-radius: var(--main--radius);
+    padding-top: var(--main--padding);
+}
+
+footer {
+    background-color: var(--main--bg--color);
+    grid-area: footer;
+    border-radius: var(--main--radius);
+    padding-top: var(--main--padding);
+    text-align: center; /* Centralizando o texto */
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center; /* Alinhando elementos na vertical */
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.nome {
+    /* Estilizando a classe nome, elementos como tamanho da fonte, peso e cor */
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px;
+    margin-right: auto;
+    color: rgb(139, 1, 139);
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu-items li {
+    margin-left: 15px;
+}
+
+.menu-items li a {
+    /* Removendo a decoração dos itens do menu, como sublinhado e estilizando o texto*/
+    text-decoration: none;
+    color: rgb(139, 1, 139);
+    font-weight: bold;
+}
+
+.menu-items li a:hover {
+    /* Estilizando os itens de menu no contato com o mouse */
+    background-color:rgb(139, 1, 139);
+    color: white;
+    font-weight: bold;
+    border-radius: var(--main--radius);
+    padding: 5px;
+}
+
+.main1 {
+    flex: 1; /* Adaptando o conteúdo ao espaço disponível */
+    padding: 0 15px; 
+    box-sizing: border-box; /* Incluindo o padding no cálculo da largura */
+    align-self: center;
+  }
+
+.livrodestaque {
+    /* Estilizando margem e alinhando a imagem verticalmente */
+    margin: 15px;
+    align-self: center;
+} 
+
+.eu-img {
+    /* Arredondando a imagem e colocando borda */
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+h1, h3 {
+    /* Alterando a cor do h1 e h3 */
+    color: rgb(139, 1, 139);
+
+}
+
+h1 {
+   /* Estilizando o tamanho do h1 */
+    font-size: 30px;
+}
+
+section p {
+    margin: 10px 0; /* Espaçamento entre a imagem e as estrelas */
+    font-size: 24px;
+  }
